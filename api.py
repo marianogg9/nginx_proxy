@@ -1,29 +1,9 @@
 import subprocess, json, crossplane
 from flask import Flask, request
 
-conf_file = '/etc/nginx/nginx.conf'
+conf_file = '/etc/nginx/nginx.conf'                                             # setting up a custom path for nginx.conf file
 
 api = Flask('flaskshell')
-
-def get_directive(directive):
-    payload = crossplane.parse(conf_file)['config'][0]['parsed']
-
-    if directive == 'http':
-        output = [x['block'] for x in payload if x['directive'] == directive]
-    else:
-        output = [x for x in payload if x['directive'] == directive]
-
-    return json.dumps(output, indent=4)
-
-def get_rate_limit():
-    payload = crossplane.parse(conf_file)['config'][0]['parsed']
-    output = [x['block'] for x in payload if x['directive'] == 'http']
-
-    for i in output:
-        for x in i:
-            if x['directive'] == 'limit_req_zone':
-                return json.dumps(x['args'])
-
 
 # some other useful functions, TODO:
 #
@@ -50,13 +30,13 @@ def config():
     if request.method == 'GET':
         if 'format=text' in request.args:
             try:
-                payload = crossplane.parse(conf_file)['config'][0]['parsed']     # fetch nginx config from nginx.conf file
-                return crossplane.build(payload)                                    # get nginx config as a string
+                payload = crossplane.parse(conf_file)['config'][0]['parsed']    # fetch nginx config from nginx.conf file
+                return crossplane.build(payload)                                # get nginx config as a string
             except Exception as e:
                 return 'Error: cannot fetch config. More info: %e' % e
         else:
             try:
-                payload = crossplane.parse(conf_file)['config'][0]['parsed']     # fetch nginx config from nginx.conf file
+                payload = crossplane.parse(conf_file)['config'][0]['parsed']    # fetch nginx config from nginx.conf file
                 return json.dumps(payload)
             except Exception as e:
                 return 'Error: cannot fetch config. More info: %e' % e
@@ -76,27 +56,7 @@ def config():
 
             return "Successfully updated Nginx conf!. Here's the new one: \n\n%s" % payload
         except Exception as e:
-            return e
-
-# @api.route('/date/')
-# def get_date():
-#     date = 'date'
-#     try:
-#         result = {
-#             "command": "%s" % date,
-#             "output": "%s" % subprocess.run([date],shell=True)
-#         }
-#         return json.dumps(result,indent=4)
-#     except subprocess.CalledProcessError:
-#         return 'An error ocurred while trying to fetch date info.'
-#
-# @api.route('/ip/')
-# def get_ip():
-#     try:
-#         output = requests.get('http://ifconfig.io').text
-#         return output
-#     except Exception as e:
-#         return 'An error ocurred while retrieving ip: %s' % e
+            return "Something went wrong. More info: %" % e
 
 if __name__ == '__main__':
     api.run(host='0.0.0.0', port=8001)
