@@ -28,8 +28,8 @@ http {
     server {
         listen 8080;
         server_name testeando_local;
-        location /test {
-            proxy_pass http://nginx.org/en/docs/;
+        location / {
+            proxy_pass https://api.mercadolibre.com/;
         }
     }
 }
