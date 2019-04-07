@@ -1,8 +1,10 @@
 #!/bin/bash
 
-yum install -y http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+yum install -y http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm https://centos7.iuscommunity.org/ius-release.rpm
 
-yum install -y git wget gcc openssl-devel libssl-dev pcre-devel nginx
+yum install -y git wget gcc openssl-devel libssl-dev pcre-devel nginx python36u python36u-pip
+
+pip3.6 install crossplane flask
 
 git clone https://github.com/vozlt/nginx-module-vts.git
 
