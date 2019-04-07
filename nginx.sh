@@ -29,5 +29,7 @@ cd nginx-${VERSION}
 
 make
 
-cp -r nginx_config.example /etc/nginx/nginx.conf
+yes | cp nginx_config.example /etc/nginx/nginx.conf
 cp nginx-1.14.2/objs/ngx_http_vhost_traffic_status_module.so /etc/nginx/modules/
+
+systemctl enable nginx && systemctl start nginx
