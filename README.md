@@ -33,3 +33,4 @@ Last roite will return a json object with Nginx statistic information obtained v
   - CentOS v7.
   - Nginx v1.14.1.
   - Python v3.6.
+- I've used a pretty good tool to convert nginx conf to JSON and backwards: https://github.com/nginxinc/crossplane
