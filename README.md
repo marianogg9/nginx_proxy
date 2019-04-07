@@ -1,5 +1,7 @@
 # nginx_proxy
 
+![Alt text](image/proxy.png?raw=true "Title")
+
 ## What is this?
 This is a minimal Rest API built in Flask running on python3.x, and an Nginx proxy_reverse set up proxying requests to and from an external host.
 
