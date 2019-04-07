@@ -1,7 +1,7 @@
 # nginx_proxy
 
 ## What is this?
-This is an Rest API built in Flask running on python3.x.
+This is a minimal Rest API built in Flask running on python3.x.
 
 ## What does it do?
 Initially it now allows just three features:
