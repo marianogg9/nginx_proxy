@@ -17,7 +17,7 @@ Last roite will return a json object with Nginx statistic information obtained v
 ## How is it installed?
 - Clone this repo.
 - Run nginx.sh script.
-  - what it does? Installs the following packages: git wget gcc openssl-devel libssl-dev pcre-devel and of course nginx from.
+  - what it does? Installs the following packages: git wget gcc openssl-devel libssl-dev pcre-devel and of course, Nginx.
   - and then what? It compiles VTS module.
 
 ## How is it run?
