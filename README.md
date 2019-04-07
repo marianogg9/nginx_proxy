@@ -19,7 +19,6 @@ Last roite will return a json object with Nginx statistic information obtained v
 - Run nginx.sh script.
   - what it does? Installs the following packages: git wget gcc openssl-devel libssl-dev pcre-devel and of course nginx from.
   - and then what? It compiles VTS module.
-  - but..I don't want to compile it because I'm in a hurry. No worries, it's been already compiled and it's sitting right there for you to include in Nginx's config.
 
 ## How is it run?
 - Run api.py with python3.x (tested with 3.6) as a service or in stdout, I prefer doing it using a screen session, but whatever works for you.
