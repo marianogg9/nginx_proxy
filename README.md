@@ -1,7 +1,7 @@
 # nginx_proxy
 
 ## What is this?
-This is a minimal Rest API built in Flask running on python3.x.
+This is a minimal Rest API built in Flask running on python3.x, and an Nginx proxy_reverse set up proxying requests to and from an external host.
 
 ## What does it do?
 Initially it now allows just three features:
@@ -13,6 +13,10 @@ This route responds two methods: GET and POST.
 - POST will receive a json object containing nginx.conf content, will replace current nginx.conf file, perform an Nginx config check, reload config and return updated nginx.conf content.
 ### /stats
 Last route will return a json object with Nginx statistic information obtained via Nginx VTS module (https://github.com/vozlt/nginx-module-vts).
+
+## How it works?
+Nginx uses proxy_pass directive to fetch information from a proxied external host and we can navigate that external site without actually accessing it. More info: http://nginx.org/en/docs/http/ngx_http_proxy_module.html
+Flask API is a REST way for us to interact with Nginx configurations and statistics.
 
 ## How is it installed?
 - Clone this repo.
