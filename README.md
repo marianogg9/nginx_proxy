@@ -12,7 +12,7 @@ This route responds two methods: GET and POST.
 - GET will return a json object containing nginx.conf content.
 - POST will receive a json object containing nginx.conf content, will replace current nginx.conf file, perform an Nginx config check, reload config and return updated nginx.conf content.
 ### /stats
-Last roite will return a json object with Nginx statistic information obtained via Nginx VTS module (https://github.com/vozlt/nginx-module-vts).
+Last route will return a json object with Nginx statistic information obtained via Nginx VTS module (https://github.com/vozlt/nginx-module-vts).
 
 ## How is it installed?
 - Clone this repo.
