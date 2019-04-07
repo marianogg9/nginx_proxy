@@ -3,7 +3,7 @@
 ## What is this?
 This is an Rest API built in Flask running on python3.x.
 
-## What it does?
+## What does it do?
 Initially it now allows just three features:
 ### /
 This is just a welcome message.  
