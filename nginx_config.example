@@ -29,7 +29,7 @@ http {
         listen 8080;
         server_name testeando_local;
         location / {
-            proxy_pass https://api.mercadolibre.com/;
+            proxy_pass https://external_api_url/;
         }
     }
 }
