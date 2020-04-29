@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/marianog9/marianog9/_apis/build/status/marianogg9.nginx_proxy?branchName=master)](https://dev.azure.com/marianog9/marianog9/_build/latest?definitionId=2&branchName=master) [![Build Status](https://travis-ci.org/marianogg9/nginx_proxy.svg?branch=master)](https://travis-ci.org/marianogg9/nginx_proxy)
+[![Build Status](https://dev.azure.com/marianog9/marianog9/_apis/build/status/marianogg9.nginx_proxy?branchName=master)](https://dev.azure.com/marianog9/marianog9/_build/latest?definitionId=2&branchName=master) [![Build Status](https://travis-ci.org/marianogg9/nginx_proxy.svg?branch=master)](https://travis-ci.org/marianogg9/nginx_proxy) ![Python package](https://github.com/marianogg9/nginx_proxy/workflows/Python%20package/badge.svg?branch=master)
 
 # nginx_proxy
 
