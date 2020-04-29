@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/marianog9/marianog9/_apis/build/status/marianogg9.nginx_proxy?branchName=master)](https://dev.azure.com/marianog9/marianog9/_build/latest?definitionId=2&branchName=master) [![Build Status](https://travis-ci.org/marianogg9/nginx_proxy.svg?branch=master)](https://travis-ci.org/marianogg9/nginx_proxy)
+
 # nginx_proxy
 
 ![Alt text](image/proxy.png?raw=true "Title")
